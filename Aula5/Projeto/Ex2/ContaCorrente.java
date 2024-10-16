@@ -13,26 +13,30 @@ public class ContaCorrente {
         this.saldo = s;
     }
 
-    public double Depositar(double deposito){
-        return deposito += saldo;
+    public void  Depositar(double deposito){
+        deposito += saldo;
+        System.out.println("Deposito realizado com sucesso");
     }
 
-    public double Sacar(double saque){
+    public void Sacar(double saque){
         if (saldo > 0) {
             System.out.println("Saldo menor que zero");
         }
         else{
             saque -= saldo;
-        }
-        return saldo;
+            System.out.println("Saque realizado com sucesso");
+        }  
     }
 
-    public double VerSaldo(){
+    public void VerSaldo(){
        System.out.println(saldo);
     }
 
-    public String ConsultarDados(){
-        return "Numero: " + getNumero() + "\nDigito: " + getDigito() + "\nAgencia: " + getAgencia() + "\nSaldo: " + getSaldo();
+    public void ConsultarDados(){
+        System.out.println("Numero: " + numero);
+        System.out.println("Digito: " + digito);
+        System.out.println("Agencia: " + agencia.getNumero());
+        System.out.println("Saldo: " + saldo);
     }
 
     public int CalcularDigito(int n){
