@@ -11,7 +11,7 @@ public class Desempregado extends PessoaFisica {
     }
     
     public void ConsultarDados(){
-        System.out.println("" + super.ConsultarDados());
+        super.ConsultarDados();
         System.out.println("Valor Seguro Desemprego: " + seguroDesemprego);
     }
 
